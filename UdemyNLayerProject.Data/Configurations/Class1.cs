@@ -4,7 +4,10 @@ using System.Text;
 
 namespace UdemyNLayerProject.Data.Configurations
 {
-    class Class1
+    public class Class1
     {
+        public int Id { get; set; }
+        public int Name { get; set; }
+        public int Age { get; set; }
     }
 }
