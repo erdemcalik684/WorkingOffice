@@ -28,7 +28,7 @@ namespace UdemyNLayerProject.Data
             //tabi buraya yazabiliriz ama class içinde yapacağım.
             //classımda Data/Configuration/Product yada Category Configuration içinde yazdım.
 
-            modelBuilder.ApplyConfiguration(new ProductConfiguration);
+           
 
             //IEntityTypeConfiguration kullanacaksın kısacası...
            
