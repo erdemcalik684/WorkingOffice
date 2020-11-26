@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using UdemyNLayerProject.Core.Models;
+using UdemyNLayerProject.Data.Configurations;
 
 namespace UdemyNLayerProject.Data
 {
@@ -28,8 +29,9 @@ namespace UdemyNLayerProject.Data
             //tabi buraya yazabiliriz ama class içinde yapacağım.
             //classımda Data/Configuration/Product yada Category Configuration içinde yazdım.
 
-           
 
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             //IEntityTypeConfiguration kullanacaksın kısacası...
            
         }

@@ -18,7 +18,7 @@ namespace UdemyNLayerProject.Core.UnitOfWorks
          * Bu bize iş yüküdür.
          * UNITOFWORK Kullanırsak ne olur ?
          * AMACI : Bütün Database işlemleri bize bırakıyor.
-         * Yani diyorki sen bütün işlemlerini hallet daha sonra bana haber ver ben onları VT'ye aktaracağım diyor.
+         * Yani diyorki sen bütün işlemlerini hallet,ben bunu hafızamda tutuyorum, daha sonra bana haber ver ben onları VT'ye aktaracağım diyor.
          * Yani daha anlaşılı şekilde Commit veya  SavaChanges edeceğim diyor.Amacı budur..
          */
 
