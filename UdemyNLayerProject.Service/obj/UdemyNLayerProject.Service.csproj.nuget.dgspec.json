@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj": {}
+    "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
+    "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
+        "projectUniqueName": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
         "projectName": "UdemyNLayerProject.Core",
-        "projectPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
+        "projectPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
         "packagesPath": "C:\\Users\\90546\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\obj\\",
+        "outputPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj": {
+    "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
+        "projectUniqueName": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
         "projectName": "UdemyNLayerProject.Data",
-        "projectPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
+        "projectPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
         "packagesPath": "C:\\Users\\90546\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Data\\obj\\",
+        "outputPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
-                "projectPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj"
+              "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
+                "projectPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj"
               }
             }
           }
@@ -140,14 +140,14 @@
         }
       }
     },
-    "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj": {
+    "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj",
+        "projectUniqueName": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj",
         "projectName": "UdemyNLayerProject.Service",
-        "projectPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj",
+        "projectPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj",
         "packagesPath": "C:\\Users\\90546\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Service\\obj\\",
+        "outputPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -166,11 +166,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
-                "projectPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj"
+              "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
+                "projectPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj"
               },
-              "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj": {
-                "projectPath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj"
+              "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj": {
+                "projectPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj"
               }
             }
           }

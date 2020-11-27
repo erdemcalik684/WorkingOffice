@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XUWqfz3mwnoNAuIPYqQohSMisoPNVXL94Z66EIeuWEpoVZPOlardV7eYUfgWtKluyaamHy7ZzQHWpsC5RmF4fQ==",
+  "dgSpecHash": "wyr7VQYqyjBRmcgxUgI8jZh2jywAz485yv9K2HOg2rs+BHkuk3s9viHk7p/qyIVgNAqv97u6KG9cKL4P5F50vA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\90546\\source\\repos\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
+  "projectFilePath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\90546\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\90546\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
