@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using UdemyNLayerProject.Core.UnitOfWorks;
+using UdemyNLayerProject.Data;
+using UdemyNLayerProject.Data.UnitOfWorks;
 
 namespace UdemyNLayerProject.API
 {
@@ -25,6 +22,20 @@ namespace UdemyNLayerProject.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //startup güncellemesi 1.
+            //appsettings.json içinde baðlantý ayarlamasýný yaptým.
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration
+                    ["ConnectionStrings:SqlConStr"].ToString(),
+                    o=> {
+                        o.MigrationsAssembly("UdemyNLayerProject.Data");
+                    });
+            });
+            //startup güncellemesi 2.
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
             services.AddControllers();
         }
 

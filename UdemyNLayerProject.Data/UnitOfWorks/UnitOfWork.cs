@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using UdemyNLayerProject.Core.Repositories;
+using UdemyNLayerProject.Core.UnitOfWorks;
+using UdemyNLayerProject.Data.Repositories;
+
+namespace UdemyNLayerProject.Data.UnitOfWorks
+{
+    public class UnitOfWork : IUnitOfWork
+    {
+        private readonly AppDbContext _context;
+        private ProductRepository _productRepository;
+        private CategoryRepository _categoryRepository;
+        public UnitOfWork(AppDbContext appDbContext)
+        {
+            _context = appDbContext;
+        }
+
+
+        //unitofwork aracılığıyla products ve categorye ulaşmak için nesne örneklerini ürettim.
+        // ?? null ise demektir.
+        public IProductRepository Products => _productRepository = _productRepository ?? new ProductRepository(_context);
+
+        public ICategoryRepository Categories => _categoryRepository = _categoryRepository ?? new CategoryRepository(_context);
+
+        public void Commit()
+        {
+            //savechanges metodudur aslında.
+            //senkron...
+            _context.SaveChanges();
+        }
+
+        public async Task CommitAsync()
+        {
+            //savechanges metodudur aslında.
+            //asenkron...
+            await _context.SaveChangesAsync();
+        }
+    }
+}
