@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {}
+    "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
+    "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
+        "projectUniqueName": "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
         "projectName": "UdemyNLayerProject.Core",
-        "projectPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
-        "packagesPath": "C:\\Users\\90546\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\90546\\OneDrive\\Masaüstü\\WorkingOffice\\WorkingOffice\\UdemyNLayerProject.Core\\obj\\",
+        "projectPath": "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj",
+        "packagesPath": "C:\\Users\\3732179\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\90546\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\3732179\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

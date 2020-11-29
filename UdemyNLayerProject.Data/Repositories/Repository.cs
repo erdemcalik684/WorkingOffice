@@ -13,7 +13,7 @@ namespace UdemyNLayerProject.Data.Repositories
     {
         protected readonly DbContext _context;
         private readonly DbSet<TEntity> _dbSet; //sadece burda kullandığım için private
-        public Repository(DbContext context)
+        public Repository(AppDbContext context)
         {
             _context = context; // vt ye erişirim.
             _dbSet = context.Set<TEntity>(); // tablolara erişirim.
@@ -33,9 +33,9 @@ namespace UdemyNLayerProject.Data.Repositories
         //product.Where(x=>x.Name="Erdem");
         //where sorgusu generic bir sorgu olamaz.
         
-        public IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> predicate)
+        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
         {
-            return _dbSet.Where(predicate);
+            return  await _dbSet.Where(predicate).ToListAsync();
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()

@@ -20,6 +20,7 @@ namespace UdemyNLayerProject.Data
         //Tabloları ekle.Yani classları tablo haline çeviriyoruz...
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Person> Persons { get; set; }
 
         //3.aşama
         //vt ve tablolar oluşmadan önce oluşacak metot.
@@ -30,15 +31,17 @@ namespace UdemyNLayerProject.Data
             //tabi buraya yazabiliriz ama class içinde yapacağım.
             //classımda Data/Configuration/Product yada Category Configuration içinde yazdım.
 
-
+            //IEntityTypeConfiguration kullanacaksın kısacası...
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new PersonConfiguration());
             //IEntityTypeConfiguration kullanacaksın kısacası...
 
 
             //Seed data için Data/Seed/ klasörünün içerisine  kod yazdık.Bu kodu buraya entegre etmemiz gerekiyor.
             modelBuilder.ApplyConfiguration(new ProductSeed(new int[] {1,2}));
             modelBuilder.ApplyConfiguration(new CategorySeed(new int[] {1,2}));
+            //person için seed data oluşturmadım boş tablo versin.
            
         }
     }

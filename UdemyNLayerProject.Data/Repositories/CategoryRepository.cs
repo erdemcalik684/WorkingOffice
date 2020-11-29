@@ -15,7 +15,7 @@ namespace UdemyNLayerProject.Data.Repositories
         // o yüzden buraya dbcontext tanımlaması yaptık...
         //_context , repository'den geliyor.unutma.
         private AppDbContext appDbContext { get => _context as AppDbContext; }
-        public CategoryRepository(DbContext context) : base(context)
+        public CategoryRepository(AppDbContext context) : base(context)
         {
             //default constructor istiyor...
         }

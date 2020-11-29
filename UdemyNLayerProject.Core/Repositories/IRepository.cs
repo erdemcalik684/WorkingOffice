@@ -12,7 +12,7 @@ namespace UdemyNLayerProject.Core.Repositories
         Task<IEnumerable<TEntity>> GetAllAsync();
 
         //find(x=>x.Id=23)
-        IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
+        Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
 
         //category.SingleOrDefaultAsync(x=>x.name="kalem");
         //1 tane dönüp ilk olanı getirecek...
