@@ -13,6 +13,9 @@ namespace UdemyNLayerProject.API.Controllers
     [ApiController]
     public class PersonsController : ControllerBase
     {
+        //Burada product ve categoriden farklı olarak birşey yaptım
+        //Direkt IService üzerinden iletişm kurdum.
+        //ve ilk metotda fark edersen(getall) mapper dto larla oluşturmama gerek kalmadı...
         private readonly IService<Person> _personService;
         public PersonsController(IService<Person> personService)
         {
@@ -21,11 +24,19 @@ namespace UdemyNLayerProject.API.Controllers
 
 
         [HttpGet]
-
         public async Task<IActionResult> GetAll()
         {
             var persons = await _personService.GetAllAsync();
             return Ok(persons);
+        }
+
+        //farkedersen dto almadan da yapılabiliyormuş.
+        [HttpPost]
+        public async Task<IActionResult> Save(Person person)
+        {
+            var newPerson = await _personService.AddAsync(person);
+            return Ok(newPerson);
+
         }
     }
 }

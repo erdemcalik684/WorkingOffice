@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UdemyNLayerProject.API.DTOs;
+using UdemyNLayerProject.API.Filters;
 using UdemyNLayerProject.Core.Models;
 using UdemyNLayerProject.Core.Services;
 
@@ -33,7 +34,7 @@ namespace UdemyNLayerProject.API.Controllers
             return Ok(_mapper.Map<IEnumerable<ProductDto>>(products));
         }
 
-
+        [ServiceFilter(typeof(NotFoundFilter))]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -42,7 +43,7 @@ namespace UdemyNLayerProject.API.Controllers
         }
 
 
-
+        [ValidationFilter]
         [HttpPost]
         public async Task<IActionResult> Save(ProductDto productDto)
         {
@@ -57,8 +58,7 @@ namespace UdemyNLayerProject.API.Controllers
             return NoContent();
         }
 
-
-
+        [ServiceFilter(typeof(NotFoundFilter))]
         [HttpDelete("{id}")]
         public IActionResult Remove(int id)
         {
@@ -69,23 +69,14 @@ namespace UdemyNLayerProject.API.Controllers
 
         //api/product/1/category postman üzerinde bu şekilde istek gönderilebilir.
         //id si 1 olan ürün gelir. yanında ait olduğu kategori bilgisi de gelir.
+
+        [ServiceFilter(typeof(NotFoundFilter))]
         [HttpGet("{id}/category")]
         public async Task<IActionResult> GetWithCategoryById(int id)
         {
             var product = await _productService.GetWithCategoryByIdAsync(id);
             return Ok(_mapper.Map<ProductWithCategoryDto>(product));
         }
-
-
-
-
-
-      
-
-
-
-
-
 
     }
 }
