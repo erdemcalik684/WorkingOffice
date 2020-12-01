@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using UdemyNLayerProject.Core.Models;
 using UdemyNLayerProject.Core.Services;
 using UdemyNLayerProject.Web.DTOs;
+using UdemyNLayerProject.Web.Filters;
 
 namespace UdemyNLayerProject.Web.Controllers
 {
@@ -57,7 +58,9 @@ namespace UdemyNLayerProject.Web.Controllers
 
 
         //delete için yazılan metot async değil
-        // fakat id yi çekeceğimiz için idyi alma metodu asyn olduğu için problem olmaması için result ile bastırıyoruz.
+        //fakat id yi çekeceğimiz için idyi alma metodu asyn olduğu için problem olmaması için result ile bastırıyoruz.
+        
+        [ServiceFilter(typeof(NotFoundFilter))]
         public IActionResult Delete(int id)
         {
             var category = _categoryService.GetByIdAsync(id).Result;
