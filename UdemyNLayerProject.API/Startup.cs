@@ -43,13 +43,24 @@ namespace UdemyNLayerProject.API
 
 
 
-
+            /************              AddScoped Ne Ýþe Yarar ?             *******************/
+            //bir request içerisinde bir interfacele karþýlaþýrsa,
+            //gidiyordu ona karþý gelen classtan bir nesne örneði oluþturuyor.
+            //startup güncellemesi 2 açýlýþ.
             //startup güncellemesi 2.
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IService<>), typeof(Service.Services.Service<>));
             services.AddScoped<ICategoryService,CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //UnitofWork ne Ýþe Yarar
+            /*Örneðin 5 tablomuz olsun bu tablolarýmýz birbiriyle iliþkili olabilir ve bizim seneryomuzda bunlarýn hepsine ayný anda güncelleme ekleme yapýlabilir*/
+            /*Bu seneryoda biz kendimiz bu iþlemleri yaparsak bir tabloya veri ekleyip diðerine eklemeyi unutabiliriz.*/
+            /*Bu iþlemi biz yapmak yerine UnitofWork sen bütün talimatlarý bana ver ben hepsini yaparým diyor.*/
+            //startup güncellemesi 2 kapanýþ.
+
+            //startup güncellemesi 1 açýlýþ.
+            //appsettings.json içinde baðlantý ayarlamasýný yaptým.
             //startup güncellemesi 2.
 
 

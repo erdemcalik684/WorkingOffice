@@ -32,12 +32,6 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
-                "projectPath": "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj"
-              },
-              "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj": {
-                "projectPath": "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj"
-              },
               "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj": {
                 "projectPath": "E:\\GitHubCalismalarim\\WorkingOffice\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj"
               }
