@@ -10,7 +10,7 @@ namespace UdemyNLayerProject.Web.DTOs
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="{0} alanı boş geçilemez")]
         public string Name { get; set; }
 
         //isDeleted ve list product nesnelerini görüldüğü gibi çağırmadık.
