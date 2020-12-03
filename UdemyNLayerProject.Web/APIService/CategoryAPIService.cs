@@ -62,5 +62,48 @@ namespace UdemyNLayerProject.Web.APIService
                 return null;
             }
         }
+
+
+        //update() metodu.
+        public async Task<CategoryDto> GetByIdAsync(int id)
+        {
+            var response = await _httpClient.GetAsync($"categories/{id}"); // $ ile string ifadenin içerisinde değişken tanımlayabiliyoruz.
+            if (response.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<CategoryDto>(await response.Content.ReadAsStringAsync());
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        //update ile beraber geriye birşey dönmemek uygundur.
+        public async Task<bool> Update(CategoryDto categoryDto)
+        {
+            var stringContent = new StringContent(JsonConvert.SerializeObject(categoryDto), Encoding.UTF8, "application/json");
+            var response = await _httpClient.PutAsync("categories", stringContent);
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> Delete(int id)
+        {
+            var response = await _httpClient.DeleteAsync($"categories/{id}"); // $ ile string ifadenin içerisinde değişken tanımlayabiliyoruz.
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

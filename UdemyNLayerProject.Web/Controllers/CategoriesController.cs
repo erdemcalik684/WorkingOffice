@@ -49,14 +49,14 @@ namespace UdemyNLayerProject.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            var category = await _categoryService.GetByIdAsync(id);
+            var category = await _categoryAPIService.GetByIdAsync(id);
             return View(_mapper.Map<CategoryDto>(category));
         }
 
         [HttpPost]
-        public IActionResult Update(CategoryDto categoryDto)
+        public async Task<IActionResult> Update(CategoryDto categoryDto)
         {
-            _categoryService.Update(_mapper.Map<Category>(categoryDto));
+           await _categoryAPIService.Update(categoryDto);
             return RedirectToAction("Index");
         }
 
@@ -65,10 +65,10 @@ namespace UdemyNLayerProject.Web.Controllers
         //fakat id yi çekeceğimiz için idyi alma metodu asyn olduğu için problem olmaması için result ile bastırıyoruz.
         
         [ServiceFilter(typeof(NotFoundFilter))]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var category = _categoryService.GetByIdAsync(id).Result;
-            _categoryService.Remove(category);
+            //var category = await _categoryAPIService.GetByIdAsync(id);
+            await  _categoryAPIService.Delete(id);
             return RedirectToAction("Index");
         }
 
