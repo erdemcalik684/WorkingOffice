@@ -17,6 +17,7 @@ using UdemyNLayerProject.Data;
 using UdemyNLayerProject.Data.Repositories;
 using UdemyNLayerProject.Data.UnitOfWorks;
 using UdemyNLayerProject.Service.Services;
+using UdemyNLayerProject.Web.APIService;
 using UdemyNLayerProject.Web.Filters;
 
 namespace UdemyNLayerProject.Web
@@ -33,6 +34,9 @@ namespace UdemyNLayerProject.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //httpClient'ý kullanabilmem için bunu tanýmlamamýz gerekiyor.
+            services.AddHttpClient<CategoryAPIService>(opt => opt.BaseAddress = new Uri(Configuration["baseUrl"]));
+
             //NotFoundFilter için bu eklenmeli.Çünkü dependency injection.
             services.AddScoped<NotFoundFilter>();
 

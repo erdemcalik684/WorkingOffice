@@ -6,6 +6,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using UdemyNLayerProject.Core.Models;
 using UdemyNLayerProject.Core.Services;
+using UdemyNLayerProject.Web.APIService;
 using UdemyNLayerProject.Web.DTOs;
 using UdemyNLayerProject.Web.Filters;
 
@@ -13,17 +14,20 @@ namespace UdemyNLayerProject.Web.Controllers
 {
     public class CategoriesController : Controller
     {
+        private readonly CategoryAPIService _categoryAPIService; //httpClient üzerinden haberleşmek için bu kullanılıyor.
+        
         //API Katmanıyla aynı şekilde yapacağız...
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
-        public CategoriesController(ICategoryService categoryService, IMapper mapper)
+        public CategoriesController(ICategoryService categoryService, IMapper mapper, CategoryAPIService categoryAPIService)
         {
             _categoryService = categoryService;
             _mapper = mapper;
+            _categoryAPIService = categoryAPIService;
         }
         public async Task<IActionResult> Index()
         {
-            var categories = await _categoryService.GetAllAsync();
+            var categories = await _categoryAPIService.GetAllAsync();
             return View(_mapper.Map<IEnumerable<CategoryDto>>(categories));
         }
 
@@ -36,7 +40,7 @@ namespace UdemyNLayerProject.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CategoryDto categoryDto)
         {
-            await _categoryService.AddAsync(_mapper.Map<Category>(categoryDto));
+            await _categoryAPIService.AddAsync(categoryDto);
             return RedirectToAction("Index");
         }
 
