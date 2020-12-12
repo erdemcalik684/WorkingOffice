@@ -38,7 +38,7 @@ namespace UdemyNLayerProject.API
 
 
             //startup güncellemesi 5 - NotFoundFilter için...
-            services.AddScoped<NotFoundFilter>();
+            //services.AddScoped<NotFoundFilter>();
             //startup güncellemesi 5 - NotFoundFilter için...
 
 

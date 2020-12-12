@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 using System.Threading.Tasks;
-using UdemyNLayerProject.Core.Services;
+using UdemyNLayerProject.Web.APIService;
 using UdemyNLayerProject.Web.DTOs;
 
 namespace UdemyNLayerProject.Web.Filters
@@ -13,18 +13,18 @@ namespace UdemyNLayerProject.Web.Filters
         // verilen id ye göre herhangi bir product yoksa
         //daha metodun içine girmeden bu tanımladığımız filter buna dur diyecek.
 
-        private readonly ICategoryService _categoryService;
+        private readonly CategoryAPIService _categoryAPIService;
         //private readonly IService<Product>'ta diyebilirsin.
-        public NotFoundFilter(ICategoryService categoryService)
+        public NotFoundFilter(CategoryAPIService categoryAPIService)
         {
-            _categoryService = categoryService;
+            _categoryAPIService = categoryAPIService;
         }
 
         public async override Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            int id =(int)context.ActionArguments.Values.FirstOrDefault();//metotlarda tanımladığımız id leri yakalayacak.
-            var product = await _categoryService.GetByIdAsync(id);
-            if (product!=null)
+            int id = (int)context.ActionArguments.Values.FirstOrDefault();//metotlarda tanımladığımız id leri yakalayacak.
+            var product = await _categoryAPIService.GetByIdAsync(id);
+            if (product != null)
             {
                 await next();
             }
@@ -39,6 +39,6 @@ namespace UdemyNLayerProject.Web.Filters
             }
 
 
-            }
+        }
     }
 }

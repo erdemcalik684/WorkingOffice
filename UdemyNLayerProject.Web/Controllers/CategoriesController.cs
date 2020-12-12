@@ -1,11 +1,15 @@
-﻿using System;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+<<<<<<< Updated upstream
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using UdemyNLayerProject.Core.Models;
 using UdemyNLayerProject.Core.Services;
+=======
+using UdemyNLayerProject.Web.APIService;
+>>>>>>> Stashed changes
 using UdemyNLayerProject.Web.DTOs;
 using UdemyNLayerProject.Web.Filters;
 
@@ -13,12 +17,17 @@ namespace UdemyNLayerProject.Web.Controllers
 {
     public class CategoriesController : Controller
     {
+<<<<<<< Updated upstream
         //API Katmanıyla aynı şekilde yapacağız...
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
         public CategoriesController(ICategoryService categoryService, IMapper mapper)
+=======
+        private readonly CategoryAPIService _categoryAPIService; //httpClient üzerinden haberleşmek için bu kullanılıyor.
+        private readonly IMapper _mapper;
+        public CategoriesController(IMapper mapper, CategoryAPIService categoryAPIService)
+>>>>>>> Stashed changes
         {
-            _categoryService = categoryService;
             _mapper = mapper;
         }
         public async Task<IActionResult> Index()
